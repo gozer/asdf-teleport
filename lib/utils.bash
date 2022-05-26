@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -x
+
 set -euo pipefail
 
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for teleport.

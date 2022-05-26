@@ -11,7 +11,6 @@ repos:
   - id: trailing-whitespace
   - id: mixed-line-ending
   - id: check-yaml
-  - id: check-ast
   - id: check-byte-order-marker
   - id: check-executables-have-shebangs
   - id: check-merge-conflict
@@ -42,9 +41,20 @@ repos:
   hooks:
   - id: mdformat
 - repo: https://github.com/jumanjihouse/pre-commit-hooks
-  rev: 2.1.6
+  rev: 2.1.6  # or specific git tag
   hooks:
-  - id: markdownlint
-  # - id: shellcheck
-  - id: shfmt
-    args: [-i, '2']
+    - id: bundler-audit
+    - id: check-mailmap
+    - id: fasterer
+    - id: forbid-binary
+    - id: forbid-space-in-indent
+    - id: git-check  # Configure in .gitattributes
+    - id: git-dirty  # Configure in .gitignore
+    - id: markdownlint # Configure in .mdlrc
+    - id: reek
+    - id: require-ascii
+    - id: rubocop
+    - id: script-must-have-extension
+    - id: script-must-not-have-extension
+    - id: shellcheck
+    - id: shfmt
