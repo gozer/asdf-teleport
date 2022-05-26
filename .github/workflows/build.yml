@@ -1,10 +1,8 @@
+---
 name: Build
 
-on:
+on:  # yamllint disable-line rule:truthy
   push:
-    branches:
-      - main
-      - test
   pull_request:
 
 jobs:
@@ -13,11 +11,11 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-latest
-          - macos-latest
+        - ubuntu-latest
+        - macos-latest
     runs-on: ${{ matrix.os }}
     steps:
-      - name: asdf_plugin_test
-        uses: asdf-vm/actions/plugin-test@v1
-        with:
-          command: tsh version
+    - name: asdf_plugin_test
+      uses: asdf-vm/actions/plugin-test@v1
+      with:
+        command: tsh version
