@@ -40,21 +40,11 @@ repos:
   rev: 0.7.14  # Use the ref you want to point at
   hooks:
   - id: mdformat
-- repo: https://github.com/jumanjihouse/pre-commit-hooks
-  rev: 2.1.6  # or specific git tag
+- repo: https://github.com/koalaman/shellcheck-precommit
+  rev: v0.8.0
   hooks:
-    - id: bundler-audit
-    - id: check-mailmap
-    - id: fasterer
-    - id: forbid-binary
-    - id: forbid-space-in-indent
-    - id: git-check  # Configure in .gitattributes
-    - id: git-dirty  # Configure in .gitignore
-    - id: markdownlint # Configure in .mdlrc
-    - id: reek
-    - id: require-ascii
-    - id: rubocop
-    - id: script-must-have-extension
-    - id: script-must-not-have-extension
-    - id: shellcheck
-    - id: shfmt
+  - id: shellcheck
+- repo: https://github.com/scop/pre-commit-shfmt
+  rev: v3.5.1-1
+  hooks:
+  - id: shfmt

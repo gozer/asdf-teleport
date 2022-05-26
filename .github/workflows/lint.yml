@@ -1,36 +1,18 @@
+---
 name: Lint
 
-on:
+on:  # yamllint disable-line rule:truthy
   push:
     branches:
-      - main
+    - main
+    - test
   pull_request:
 
 jobs:
-  shellcheck:
+  pre-commit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install asdf dependencies
-        uses: asdf-vm/actions/install@v1
-
-      - name: Run ShellCheck
-        run: scripts/shellcheck.bash
-
-  shellfmt:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install asdf dependencies
-        uses: asdf-vm/actions/install@v1
-
-      - name: List file to shfmt
-        run: shfmt -f .
-
-      - name: Run shfmt
-        run: scripts/shfmt.bash
-
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+    - uses: asdf-vm/actions/install@v1
+    - uses: pre-commit/action@v2.0.3
