@@ -4,6 +4,7 @@ set -euo pipefail
 
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for teleport.
 GH_REPO="https://github.com/gravitational/teleport"
+DOWNLOAD_URL="https://get.gravitational.com"
 TOOL_NAME="teleport"
 TOOL_TEST="tsh version"
 
@@ -13,11 +14,6 @@ fail() {
 }
 
 curl_opts=(-fsSL)
-
-# NOTE: You might want to remove this if teleport is not hosted on GitHub releases.
-if [ -n "${GITHUB_API_TOKEN:-}" ]; then
-  curl_opts=("${curl_opts[@]}" -H "Authorization: token $GITHUB_API_TOKEN")
-fi
 
 sort_versions() {
   sed 'h; s/[+-]/./g; s/.p\([[:digit:]]\)/.z\1/; s/$/.z/; G; s/\n/ /' |
@@ -42,7 +38,7 @@ download_release() {
   filename="$2"
 
   # TODO: Adapt the release URL convention for teleport
-  url="$GH_REPO/archive/v${version}.tar.gz"
+  url="$DOWNLOAD_URL/teleport-v${version}-linux-amd64-bin.tar.gz"
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
