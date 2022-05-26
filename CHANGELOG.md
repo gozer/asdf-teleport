@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/gozer/asdf-teleport/compare/v1.1.0...v1.1.1) (2022-05-26)
+
+
+### Bug Fixes
+
+* filter only official released version ([6b6fd4b](https://www.github.com/gozer/asdf-teleport/commit/6b6fd4bcacd607234af3527427978c7574547e24))
+
 ## [1.1.0](https://www.github.com/gozer/asdf-teleport/compare/v1.0.0...v1.1.0) (2022-05-26)
 
 
