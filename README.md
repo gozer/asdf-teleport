@@ -2,7 +2,6 @@
 
 # asdf-teleport [![Build](https://github.com/gozer/asdf-teleport/actions/workflows/build.yml/badge.svg)](https://github.com/gozer/asdf-teleport/actions/workflows/build.yml) [![Lint](https://github.com/gozer/asdf-teleport/actions/workflows/lint.yml/badge.svg)](https://github.com/gozer/asdf-teleport/actions/workflows/lint.yml)
 
-
 [teleport](https://goteleport.com/docs) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>

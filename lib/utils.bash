@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -x
-
 set -euo pipefail
 
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for teleport.
@@ -44,8 +42,26 @@ download_release() {
   version="$1"
   filename="$2"
 
+  local platform
+
+  case "$OSTYPE" in
+  darwin*) platform="darwin" ;;
+  linux*) platform="linux" ;;
+  *) fail "Unsupported platform" ;;
+  esac
+
+  local architecture
+
+  case "$(uname -m)" in
+  aarch64* | arm64) architecture="arm64" ;;
+  armv5* | armv6* | armv7*) architecture="arm" ;;
+  i686*) architecture="386" ;;
+  x86_64*) architecture="amd64" ;;
+  *) fail "Unsupported architecture" ;;
+  esac
+
   # TODO: Adapt the release URL convention for teleport
-  url="$DOWNLOAD_URL/teleport-v${version}-linux-amd64-bin.tar.gz"
+  url="$DOWNLOAD_URL/teleport-v${version}-${platform}-${architecture}-bin.tar.gz"
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
