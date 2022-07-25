@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/gozer/asdf-teleport/compare/v1.1.0...v1.1.1) (2022-07-25)
+
+
+### Bug Fixes
+
+* Add missing numerical sort. ([a948f7f](https://www.github.com/gozer/asdf-teleport/commit/a948f7fbb5f37f0b8796b7cbf37b1bd8720f4229))
+* filter only official released version ([6b6fd4b](https://www.github.com/gozer/asdf-teleport/commit/6b6fd4bcacd607234af3527427978c7574547e24))
+
 ### [1.1.1](https://www.github.com/gozer/asdf-teleport/compare/v1.1.0...v1.1.1) (2022-05-26)
 
 
