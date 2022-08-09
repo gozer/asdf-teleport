@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/gozer/asdf-teleport/compare/v2.0.0...v2.1.0) (2022-08-09)
+
+
+### Features
+
+* Allow architecture overrides ([#16](https://github.com/gozer/asdf-teleport/issues/16)) ([902d78f](https://github.com/gozer/asdf-teleport/commit/902d78f827c2f2c8a4611cfee6af491d363dffc8))
+
 ## [2.0.0](https://github.com/gozer/asdf-teleport/compare/v1.1.0...v2.0.0) (2022-07-25)
 
 
