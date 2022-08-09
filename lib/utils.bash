@@ -60,6 +60,10 @@ download_release() {
   *) fail "Unsupported architecture" ;;
   esac
 
+  if [ -n "${TELEPORT_ARCH_OVERRIDE-}" ]; then
+    architecture="${TELEPORT_ARCH_OVERRIDE-}"
+  fi
+
   # TODO: Adapt the release URL convention for teleport
   url="$DOWNLOAD_URL/teleport-v${version}-${platform}-${architecture}-bin.tar.gz"
 

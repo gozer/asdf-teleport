@@ -43,6 +43,10 @@ asdf global teleport latest
 
 # Now teleport commands are available
 tsh version
+
+# Override the architecture of installed binary
+# For example, to install amd64 binary on and M1 Mac
+TELEPORT_ARCH_OVERRIDE=amd64 asdf install telerpot latest
 ```
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
