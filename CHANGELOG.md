@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/gozer/asdf-teleport/compare/v2.1.0...v2.1.1) (2022-11-02)
+
+
+### Bug Fixes
+
+* update download URL ([#18](https://github.com/gozer/asdf-teleport/issues/18)) ([39f7179](https://github.com/gozer/asdf-teleport/commit/39f7179985b33623b7d5b38b9c32bb65daacaa6f))
+
 ## [2.1.0](https://github.com/gozer/asdf-teleport/compare/v2.0.0...v2.1.0) (2022-08-09)
 
 
