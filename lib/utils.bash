@@ -4,7 +4,7 @@ set -euo pipefail
 
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for teleport.
 GH_REPO="https://github.com/gravitational/teleport"
-DOWNLOAD_URL="https://get.gravitational.com"
+DOWNLOAD_URL="https://cdn.teleport.dev"
 TOOL_NAME="teleport"
 TOOL_TEST="tsh version"
 
